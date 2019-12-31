@@ -1,0 +1,450 @@
+@import './normalize.scss';
+
+$root-font-size: 16px;
+$container-max-width: 1140px;
+$primary-color: #5cb85c;
+
+html {
+  font-size: $root-font-size;
+}
+
+body {
+  font-family: source sans pro,sans-serif;
+  font-size: 1rem;
+  color: #373a3c;
+  background-color: #fff;
+}
+
+code {
+  padding: .2rem .4rem;
+  font-size: 90%;
+  color: #bd4147;
+  background-color: #f7f7f9;
+  border-radius: .25rem
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.1;
+}
+
+h1 {
+  font-size: 2.5rem
+}
+
+h2 {
+  font-size: 2rem
+}
+
+h3 {
+  font-size: 1.75rem
+}
+
+h4 {
+  font-size: 1.5rem
+}
+
+h5 {
+  font-size: 1.25rem
+}
+
+h6 {
+  font-size: 1rem
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+  color: $primary-color;
+}
+
+hr {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 0;
+  border-top: 1px solid rgba(0,0,0,.1)
+}
+
+.Logo {
+  font-family: titillium web, sans-serif;
+  font-weight: 700;
+  &--primary {
+    color: $primary-color;
+  }
+  &--white {
+    color: #fff;
+    text-shadow: 0 1px 3px rgba(0,0,0, .3)
+  }
+  &--medium {
+    font-size: 1.5rem;
+  }
+  &--large {
+    font-size: 3.5rem;
+  }
+}
+
+.Button {
+  line-height: 1.25;
+  font-size: 1rem;
+  border-radius: .25rem;
+
+  &--small {
+    padding: .25rem .5rem;
+    font-size: .875rem;
+    border-radius: .2rem;
+  }
+
+  &--outlined {
+    border: 1px solid #999;
+    color: #999;
+  }
+}
+
+.Header {
+  height: 56px;
+  display: flex;
+  justify-content: space-between;
+  max-width: $container-max-width;
+  margin: auto;
+
+  &__Brand, &__Nav {
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+
+  &__NavLink {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-bottom: 2px solid transparent;
+    border-radius: 1px;
+
+    &[aria-current="page"] {
+      border-color: $primary-color;
+    }
+  }
+}
+
+.Hero {
+  max-width: $container-max-width;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 0;
+  margin-bottom: 2rem;
+
+  &__Title {
+    font-size: 2.8rem;
+    font-weight: 600;
+    line-height: 1.1;
+  }
+
+  &__Description {
+    font-size: 1.5rem;
+    font-weight: 300;
+  }
+}
+
+
+.HomePage {
+  .Hero {
+    align-items: center;
+    box-shadow: inset 0 8px 8px -8px rgba(0,0,0, .3), inset 0 -8px 8px -8px rgba(0,0,0, .3);
+  }
+
+  &__Hero {
+    background-color: $primary-color;
+    color: #fff;
+  }
+
+  &__Content {
+    max-width: $container-max-width;
+    margin: 30px auto;
+    display: flex;
+  }
+
+  &__ListContainer {
+    flex-grow: 1;
+  }
+
+  &__TagsContainer {
+    flex-basis: 225px;
+    flex-shrink: 0;
+  }
+
+  &__Navs {
+    min-height: 40px;
+    display: flex;
+    border-bottom: 1px solid #e5e5e5;
+  }
+
+  &__NavLink {
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+.ArticleListItem {
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  + .ArticleListItem {
+    border-top: 1px solid #edededcc;
+  }
+}
+
+.HomePage__TagsContainer {
+  margin-left: 30px;
+}
+
+.PopularTags {
+  padding: 10px;
+  border-radius: 4px;
+  background-color: #f3f3f3;
+  align-self: flex-start;
+
+  &__List {
+    display: flex;
+    list-style: none;
+    margin-left: -2px;
+    margin-top: 5px;
+  }
+
+  &__Header {
+    font-weight: normal;
+  }
+}
+
+.Tag {
+  padding: 0 0.5rem;
+  font-size: 0.85rem;
+  display: inline-block;
+  margin: 2px;
+  border-radius: 20px;
+
+  &--default {
+    background-color: #818a91;
+    color: #fff;
+    font-weight: bold;
+  }
+
+  &--outlined {
+    border: 1px solid #ddd;
+    color: #aaa;
+  }
+}
+
+.ArticleListItem {
+  .AuthorProfile {
+    margin-bottom: 1rem;
+  }
+
+  &__Meta {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  &__PreviewHeader {
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+  &__PreviewDescription {
+    color: #999;
+    margin-bottom: 15px;
+  }
+  &__PreviewReadMore {
+    font-size: 0.8rem;
+    color: #bbb;
+  }
+  &__PreviewFooter {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.AuthorProfile {
+  display: flex;
+  align-items: center;
+
+  &__Image {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+  }
+
+  &__Details {
+    margin-left: 10px;
+    line-height: 1rem;
+  }
+
+  &__Name {
+    font-weight: 600;
+  }
+
+  &__Other {
+    font-size: 0.8rem;
+    color: #bbb;
+  }
+
+  &--small {
+    .AuthorProfile__Image {
+      width: 20px;
+      height: 20px;
+    }
+
+    .AuthorProfile__Name {
+      font-weight: normal;
+    }
+  }
+
+  &--horizontal {
+    .AuthorProfile__Details {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .AuthorProfile__Other {
+      margin-left: 5px;
+    }
+  }
+}
+
+.FavoriteButton {
+  padding: 0 0.6rem;
+  border: 1px solid #bbb;
+  color: #bbb;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  line-height: 1rem;
+  display: flex;
+  min-height: 27px;
+  align-items: center;
+  justify-content: center;
+
+  .ion-heart {
+    margin-right: 4px;
+    margin-top: 1px;
+  }
+}
+
+
+.ArticlePage {
+  &__Hero {
+    background-color: #333;
+    color: #fff;
+
+    .AuthorProfile {
+      margin-top: 2rem;
+    }
+  }
+
+  &__Content {
+    max-width: $container-max-width;
+    margin: auto;
+
+    p {
+      font-size: 1.2rem;
+      line-height: 1.8rem;
+      margin-bottom: 2rem
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-weight: 500;
+      margin: 1.6rem 0 1rem;
+    }
+  }
+
+  &__Comments {
+    max-width: 760px;
+    margin: auto;
+  }
+}
+
+.Comment {
+  border: 1px solid #e5e5e5;
+  margin-bottom: .75rem;
+  background-color: #fff;
+  border-radius: .25rem;
+
+  &__Body {
+    padding: 1.25rem;
+  }
+
+  &__Footer {
+    border-top: 1px solid #e5e5e5;
+    border-radius: 0 0 .25rem .25rem;
+    font-size: .8rem;
+    padding: .75rem 1.25rem;
+    background-color: #f5f5f5;
+  }
+}
+
+.Pagination {
+  margin-top: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  > a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-basis: 43px;
+    min-height: 42px;
+    border: 1px solid #ddd;
+    margin-left: -1px;
+    margin-top: -1px;
+  }
+}
+
+.ProfilePage {
+  &__Hero {
+    background-color: #f3f3f3;
+    color: #333;
+  }
+
+  &__Content {
+    max-width: $container-max-width;
+    margin: auto;
+  }
+}
+
+.ProfileHero {
+  &__Details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+
+  &__Image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+  }
+
+  &__Name {
+    font-weight: 700;
+  }
+
+  &__Actions {
+    display: flex;
+    justify-content: flex-end;
+  }
+}

@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import SessionContext from '../../contexts/Session';
 import ReactDOM from 'react-dom';
 
+const SessionContext = React.createContext(null);
 const SESSION_KEY = 'REACT_ORBIT_REALWORLD'
 
 function setSessionToken(token) {

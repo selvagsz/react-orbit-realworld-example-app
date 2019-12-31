@@ -3,14 +3,19 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@orbit/coordinator": "^0.16.4",
+    "@orbit/jsonapi": "^0.16.4",
+    "@orbit/memory": "^0.16.4",
     "@reach/router": "^1.2.1",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "classnames": "^2.2.6",
+    "marked": "^0.8.0",
     "node-sass": "^4.13.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
+    "react-orbit": "^0.0.0",
     "react-scripts": "3.3.0"
   },
   "scripts": {
