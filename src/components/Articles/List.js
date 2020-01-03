@@ -17,6 +17,7 @@ function ArticlesList({page = 1, tag, filter = {}}) {
     query((t) =>
       t
         .findRecords('article')
+        .sort('-createdAt')
         .page({
           offset: (page - 1) * PER_PAGE,
           limit: PER_PAGE,
